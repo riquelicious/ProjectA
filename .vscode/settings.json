@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./addons/pythonscript/windows-64/lib/site-packages"
+    ]
+}

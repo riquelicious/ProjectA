@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="ProjectA"
+run/main_scene="res://Scenes/Test.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/resizable=false
+window/size/borderless=true
+window/size/always_on_top=true
+window/stretch/aspect=false
+
+[gdnative]
+
+singletons=[ "res://pythonscript.gdnlib" ]
+
+[global]
+
+file=false
+position=false
+center=false
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[python_script]
+
+path="res://;res://lib;res://lib/site-packages"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
