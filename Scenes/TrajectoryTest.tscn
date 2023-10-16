@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/AddObject.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/ball1.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 30, 1, 30 )
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="SphereMesh" id=3]
+
+[node name="TrajectoryTest" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Floor" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+transform = Transform( 30, 0.000748817, 0.00445246, -0.0224637, 1, -0.00554109, -0.00445661, 0.000184592, 30, 0, 0, 0 )
+mesh = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.999993, -0.00383071, -2.02353e-05, 3.8548e-05, 0.00478049, 0.999989, -0.00383057, -0.999981, 0.0047806, 0, 62.1907, 0 )
+
+[node name="Camera2" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.95071, 33.0908 )
+current = true
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -20.5103 )
+visible = false
+mesh = SubResource( 3 )
+
+[node name="RigidBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.70536, 0 )
+visible = false
+script = null

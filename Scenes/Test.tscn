@@ -2,5 +2,5 @@
 
 [ext_resource path="res://Scripts/PythonCaller.py" type="Script" id=1]
 
-[node name="Spatial" type="Spatial"]
+[node name="HandTracking" type="Spatial"]
 script = ExtResource( 1 )
